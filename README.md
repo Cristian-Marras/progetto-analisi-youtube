@@ -13,8 +13,8 @@ Le domande di ricerca principali sono state:
 ## Presentazione del Progetto
 
 Per questo progetto è stata preparata una presentazione in formato slide, utilizzata per l'esposizione universitaria. Sebbene il report su Deepnote sia più completo e interattivo, è possibile scaricare le slide originali.
-
-* **[Scarica le slide della presentazione (PDF)](./nome_del_tuo_file.pdf)**
+* (./Progetto SMM Muschio.pptx)**
+* (./
 
 ## 🛠️ Strumenti e Tecnologie
 
