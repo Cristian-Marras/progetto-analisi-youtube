@@ -9,12 +9,13 @@ Le domande di ricerca principali sono state:
 * Analisi temporale di likes, views, comments e sentiment, con un confronto sulle varie direzioni del canale
 * Analisi di base su grado, cammini, centralità
 * Determinare quali sono le coppie di video con più commentatori in comune e perché
+* Comparazione sentiment con Tintoria Podcast
 
-## Presentazione del Progetto
+## 📄 Presentazione del Progetto
 
-Per questo progetto è stata preparata una presentazione in formato slide, utilizzata per l'esposizione universitaria. Sebbene il report su Deepnote sia più completo e interattivo, è possibile scaricare le slide originali.
-* (./Progetto SMM Muschio.pptx)**
-* (./
+Per questo progetto è stata preparata anche una presentazione in formato slide, utilizzata per l'esposizione universitaria. Sebbene il report su Deepnote sia più completo e interattivo, è possibile scaricare le slide originali.
+
+* **[Scarica le slide della presentazione (PDF)](./Progetto_SMM_Muschio_Selvaggio.pdf)**
 
 ## 🛠️ Strumenti e Tecnologie
 
@@ -31,22 +32,52 @@ Per questo progetto è stata preparata una presentazione in formato slide, utili
     * **Gephi:** Visualizzazione avanzata di grafi e analisi di base delle reti.
 * **Best Practices:**
     * **Gestione Credenziali:** Utilizzo di Environment Variables per la gestione sicura delle chiavi API.
+ 
+## ⚙️ Metodologia e Costruzione del Dataset
+
+L'analisi si basa su un dataset costruito ad-hoc attraverso le API di YouTube e su un grafo di interazione generato a partire dai commenti.
+
+### 1. Data Gathering
+
+* **Selezione Video:** Sono stati raccolti i dati relativi agli **ultimi 100 video** pubblicati sul canale, escludendo gli "Shorts" per mantenere l'analisi focalizzata sui contenuti a lungo formato.
+* **Raccolta Commenti:** Per ciascuno dei 100 video, sono stati estratti **200 commenti di primo livello** (escludendo le risposte), per un totale di 20.000 commenti unici analizzati.
+* **Metriche Raccolte:** Per ogni video sono state salvate le seguenti metriche chiave: `Titolo`, `Numero di visualizzazioni`, `Numero di like`, `Conteggio dei commenti` e `Data di pubblicazione`.
+
+### 2. Costruzione del Grafo
+
+Per mappare le connessioni e gli interessi del pubblico tra i vari episodi, è stato costruito un grafo non orientato e pesato:
+
+* **Nodi:** Ogni **video** è rappresentato da un nodo nel grafo.
+* **Archi (Link):** Un arco collega due nodi (due video) se esiste almeno un utente che ha commentato entrambi.
+* **Peso degli Archi:** Il peso di ogni arco è proporzionale al **numero di commentatori unici** che i due video hanno in comune.
+
+Il grafo finale risultante è composto da **100 nodi** e **3112 archi pesati**.
+<img src="https://github.com/user-attachments/assets/7cbe11e0-969c-4752-9a0a-05e7f5589b0c" alt="Grafico di analisi" width="60%">
 
 ## 🚀 Report Interattivo su Deepnote
 
 Questo repository contiene il codice sorgente dell'analisi. Per una presentazione narrativa dei risultati, con grafici interattivi e spiegazioni dettagliate, si consiglia di visualizzare il progetto direttamente su Deepnote.
 
-* **[Guarda il progetto interattivo su Deepnote](https://deepnote.com/workspace/SMM-3969cef9-ce5a-42de-b779-69673e74d4cc/project/Progetto-SMM-Muschio-Selvaggio-5e5c2b6d-40f0-45a1-af21-5a0dbb73ce96/notebook/Progetto-gathering-1-1cc3dca6c514492a9f570d56a1ff0aaa?utm_source=share-modal&utm_medium=product-shared-content&utm_campaign=notebook&utm_content=5e5c2b6d-40f0-45a1-af21-5a0dbb73ce96)** *(Ricorda: ottieni il link da Deepnote cliccando su "Share" e impostando su "Can View")*
+* **[Guarda il progetto interattivo su Deepnote](https://deepnote.com/workspace/SMM-3969cef9-ce5a-42de-b779-69673e74d4cc/project/Progetto-SMM-Muschio-Selvaggio-5e5c2b6d-40f0-45a1-af21-5a0dbb73ce96/notebook/Progetto-gathering-1-1cc3dca6c514492a9f570d56a1ff0aaa?utm_source=share-modal&utm_medium=product-shared-content&utm_campaign=notebook&utm_content=5e5c2b6d-40f0-45a1-af21-5a0dbb73ce96)** 
 
 ## 📊 Risultati Chiave e Conclusioni
 
-*IN QUESTA SEZIONE DEVI INSERIRE LE TUE SCOPERTE.*
-*Scrivi 2-3 frasi che riassumono la tua conclusione principale. Esempio: "Dall'analisi emerge che il periodo di conduzione X ha registrato una media di like superiore del 20% rispetto al periodo Y, suggerendo una preferenza del pubblico per quello stile."*
+La conduzione originaria del podcast è la più apprezzata dal pubblico secondo quasi ogni metrica analizzata.
+<img src="https://github.com/user-attachments/assets/33dc42d9-e4df-463e-860f-250668de1683" alt="Grafico di analisi" width="80%">
 
-*Se vuoi, puoi aggiungere uno o due dei tuoi grafici più importanti. Per farlo:*
-1.  *Fai uno screenshot del grafico da Deepnote.*
-2.  *Nella pagina principale del tuo repository GitHub, vai su "Add file" -> "Upload files" e carica l'immagine.*
-3.  *Modifica questa riga per mostrare l'immagine:* `![Descrizione del tuo grafico](nome_del_file_immagine.png)`
+La seconda fase, nonostante abbia subito un drastico calo di interazione, sembra essere la più apprezzata sotto il punto di vista del sentiment.
+<img src="https://github.com/user-attachments/assets/e87e879e-6992-4135-90bb-110b459245dd" alt="Grafico di analisi" width="80%">
+
+Il sentiment risulta essere in media molto più negativo rispetto a quello del podcast concorrente Tintoria Podcast.
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/4ad93dc6-f23e-4e9c-99d2-c62c3cb0147c" 
+           alt="Descrizione Immagine 1" width="55%"></td>
+    <td><img src="https://github.com/user-attachments/assets/80b4ba9f-19e8-48d8-a232-38ffa2516675" 
+           alt="Descrizione Immagine 2" width="65%"></td>
+  </tr>
+</table>
+
 
 
 ## Contatti
