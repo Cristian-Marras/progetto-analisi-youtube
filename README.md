@@ -84,5 +84,5 @@ Il sentiment risulta essere in media molto più negativo rispetto a quello del p
 
 Per qualsiasi domanda o proposta, non esitare a contattarmi:
 
-* **LinkedIn:** [Cristian Marras](www.linkedin.com/in/cristian-marras-151932186)
+* **LinkedIn:** [Cristian Marras](https://www.linkedin.com/in/cristian-marras-151932186/)
 * **Email:** cristianmarrasj@gmail.com
