@@ -1,15 +1,15 @@
-# progetto-analisi-youtube
+# Analisi Dati del Canale Youtube Muschio Selvaggio
 Progetto universitario di analisi dati sul canale Youtube Muschio Selvaggio. Utilizzando Python e analisi delle metriche di engagement (like, commenti, visualizzazioni, sentiment), si è risposto alla domanda di ricerca: quale conduzione è preferita dal pubblico?
 
 ---
 
 ## 🎯 Obiettivo del Progetto
 
-Le domande di ricerca principali sono state:
-* Analisi temporale di likes, views, comments e sentiment, con un confronto sulle varie direzioni del canale
-* Analisi di base su grado, cammini, centralità
-* Determinare quali sono le coppie di video con più commentatori in comune e perché
-* Comparazione sentiment con Tintoria Podcast
+L'obiettivo di questa analisi è stato determinare, tramite i dati, quale fase di conduzione del podcast abbia generato maggiore engagement, rispondendo a queste domande chiave:
+* Come sono variate nel tempo le metriche di performance (visualizzazioni, like, commenti) e il sentiment del pubblico al cambiare della conduzione?
+* Quali sono i video più influenti e centrali all'interno della "rete di discussione" del canale?
+* Quali episodi o argomenti creano le maggiori sovrapposizioni di pubblico?
+* Come si posiziona il sentiment del canale rispetto a un benchmark di settore (Tintoria Podcast)?
 
 ## 📄 Presentazione del Progetto
 
@@ -52,7 +52,7 @@ Per mappare le connessioni e gli interessi del pubblico tra i vari episodi, è s
 * **Peso degli Archi:** Il peso di ogni arco è proporzionale al **numero di commentatori unici** che i due video hanno in comune.
 
 Il grafo finale risultante è composto da **100 nodi** e **3112 archi pesati**.
-<img src="https://github.com/user-attachments/assets/7cbe11e0-969c-4752-9a0a-05e7f5589b0c" alt="Grafico di analisi" width="60%">
+<img src="https://github.com/user-attachments/assets/7cbe11e0-969c-4752-9a0a-05e7f5589b0c" alt="Grafo - una grossa componente connessa" width="60%">
 
 ## 🚀 Report Interattivo su Deepnote
 
@@ -63,18 +63,18 @@ Questo repository contiene il codice sorgente dell'analisi. Per una presentazion
 ## 📊 Risultati Chiave e Conclusioni
 
 La conduzione originaria del podcast è la più apprezzata dal pubblico secondo quasi ogni metrica analizzata.
-<img src="https://github.com/user-attachments/assets/33dc42d9-e4df-463e-860f-250668de1683" alt="Grafico di analisi" width="80%">
+<img src="https://github.com/user-attachments/assets/33dc42d9-e4df-463e-860f-250668de1683" alt="Analisi temporale delel visualizzazioni" width="80%">
 
 La seconda fase, nonostante abbia subito un drastico calo di interazione, sembra essere la più apprezzata sotto il punto di vista del sentiment.
-<img src="https://github.com/user-attachments/assets/e87e879e-6992-4135-90bb-110b459245dd" alt="Grafico di analisi" width="80%">
+<img src="https://github.com/user-attachments/assets/e87e879e-6992-4135-90bb-110b459245dd" alt="Analisi temporale del sentiment" width="80%">
 
 Il sentiment risulta essere in media molto più negativo rispetto a quello del podcast concorrente Tintoria Podcast.
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/4ad93dc6-f23e-4e9c-99d2-c62c3cb0147c" 
-           alt="Descrizione Immagine 1" width="55%"></td>
+           width="55%"></td>
     <td><img src="https://github.com/user-attachments/assets/80b4ba9f-19e8-48d8-a232-38ffa2516675" 
-           alt="Descrizione Immagine 2" width="65%"></td>
+           alt="Sentiment Tintoria Podcast" width="65%"></td>
   </tr>
 </table>
 
@@ -84,5 +84,5 @@ Il sentiment risulta essere in media molto più negativo rispetto a quello del p
 
 Per qualsiasi domanda o proposta, non esitare a contattarmi:
 
-* **LinkedIn:** www.linkedin.com/in/cristian-marras-151932186
+* **LinkedIn:** [Cristian Marras](www.linkedin.com/in/cristian-marras-151932186)
 * **Email:** cristianmarrasj@gmail.com
